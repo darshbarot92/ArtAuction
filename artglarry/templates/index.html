@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The ArtGallery</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+</head>
+  <body>
+    <header>
+      <h1>The ArtGallery</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'fillter_data' %}">Gallery</a>
+        <a href="#">About Us</a>
+
+        {% if username %}
+          <a href="{% url 'profile' %}">Profile</a>
+          <a style="text-transform: uppercase;">{{username}}</a>
+
+        {% else %}
+          <a href="{% url 'user_reg' %}">Login/Register</a>
+        {% endif %}
+
+    </nav>
+    <div class="container">
+      <section class="hero">
+        <img src="{% static 'images/banner.jpg'%}">
+      </section>
+    </div>
+    <section class="section">
+      <h2>Featured Artworks</h2>
+      <div class="carousel">
+          <div class="carousel-track" >
+            {% for i in data %}
+              <img src="{{i.art.url}}" style="border: 1px solid black;"  alt="Art 1">
+            {% endfor %}
+          </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Meet the Artists</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Jane Doe</h3>
+          <p>Abstract painter known for her bold use of color and movement.</p>
+        </div>
+        <div class="card">
+          <h3>John Smith</h3>
+          <p>Modern artist exploring social themes through mixed media.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Upcoming Auctions</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Spring Exhibition</h3>
+          <p>April 15, 2025 - Join us for an exclusive preview of modern art pieces.</p>
+        </div>
+        <div class="card">
+          <h3>Summer Auction</h3>
+          <p>June 5, 2025 - Featuring rare artworks from emerging artists.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 The ArtGallery. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

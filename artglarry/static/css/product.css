@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+nav a:hover {
+    background-color: #575757;
+}
+
+.image-row {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+justify-content: center;
+}
+
+.image-row img {
+width: 100%;
+max-width: 300px;
+height: 400px;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+transform: scale(1.05);
+}
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+#bid{
+    margin-left: 50px;
+    padding: 10px 40px;
+}
+.artdetail label,input{
+    display: block;
+    margin-left: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 40px;
+
+}
+
+.lable1{
+    padding-top: 100px;
+}
+@media (max-width: 900px) {
+.image-row {
+    flex-direction: column;
+    align-items: center;
+}
+}
+form{
+    width: 30%;
+    padding-left: 50px;
+}

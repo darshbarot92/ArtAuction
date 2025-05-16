@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-value {
+  font-size: 16px;
+  color: #555;
+}
+
+.order-action button {
+  padding: 8px 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-action button:hover {
+  background-color: #45a049;
+}
